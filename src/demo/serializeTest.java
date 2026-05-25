@@ -1,0 +1,14 @@
+package demo;
+
+import io.restassured.RestAssured;
+
+public class serializeTest {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		RestAssured.baseURI= "https://rahulshettyacademy.com/"
+}
+
+}
