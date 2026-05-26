@@ -3,14 +3,15 @@ package pojo;
 import java.util.List;
 
 public class AddPlace {
+
 	private int accuracy;
 	private String name;
-	private int phone_number;
+	private String phone_number;
 	private String address;
 	private String website;
 	private String language;
-	private List<String>types;
-	
+	private Location location;
+	private List<String> types;
 	public int getAccuracy() {
 		return accuracy;
 	}
@@ -23,10 +24,10 @@ public class AddPlace {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getPhone_number() {
+	public String getPhone_number() {
 		return phone_number;
 	}
-	public void setPhone_number(int phone_number) {
+	public void setPhone_number(String phone_number) {
 		this.phone_number = phone_number;
 	}
 	public String getAddress() {
@@ -47,13 +48,17 @@ public class AddPlace {
 	public void setLanguage(String language) {
 		this.language = language;
 	}
+	public Location getLocation() {
+		return location;
+	}
+	public void setLocation(Location location) {
+		this.location = location;
+	}
 	public List<String> getTypes() {
 		return types;
 	}
 	public void setTypes(List<String> types) {
 		this.types = types;
 	}
-
-	
 
 }

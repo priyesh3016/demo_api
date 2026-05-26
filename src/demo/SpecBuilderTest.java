@@ -4,14 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
 
 import static io.restassured.RestAssured.given;
 
 import pojo.AddPlace;
 import pojo.Location;
 
-public class serializeTest {
+public class SpecBuilderTest {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -33,17 +38,22 @@ public class serializeTest {
 		l.setLat(-38.383494);
 		l.setLng(33.427362);
 		
-		p.setLocation(l);
-			
 		
-		Response res=given().log().all().queryParam("key", "qaclick123")
+		RequestSpecification res = new  RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
+		.build();
+		p.setLocation(l);	
+		ResponseSpecification resspec  =  new  ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+		
+		Response response=given().spec(res)
 				.body(p)
 				.when().post("/maps/api/place/add/json").
-				then().assertThat().statusCode(200).extract().response();
+				then().spec(resspec).extract().response();
 
-				String responseString=res.asString();
+				String responseString=response.asString();
 				System.out.println(responseString);
 
 		}
+
+	
 
 }
