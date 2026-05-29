@@ -1,19 +1,21 @@
 package pojo;
 
 public class LoginResponse {
-	
 	String Token;
+	String userId;
+	String  message;
+	
 	public String getToken() {
 		return Token;
 	}
 	public void setToken(String token) {
 		Token = token;
 	}
-	public String getUserID() {
-		return userID;
+	public String getUserId() {
+		return userId;
 	}
-	public void setUserID(String userID) {
-		this.userID = userID;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	public String getMessage() {
 		return message;
@@ -21,7 +23,7 @@ public class LoginResponse {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	String userID;
-	String  message;
+
+	
 
 }
