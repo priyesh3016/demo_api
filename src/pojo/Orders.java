@@ -4,14 +4,15 @@ import java.util.List;
 
 public class Orders {
 	
-	private  List<OrderDetail> Orders;
-
-	public List<OrderDetail> getOrders() {
-		return Orders;
+	public List<OrderDetail> getOrderDetail() {
+		return orderDetail;
 	}
 
-	public void setOrders(List<OrderDetail> orders) {
-		Orders = orders;
+	public void setOrderDetail(List<OrderDetail> orderDetail) {
+		this.orderDetail = orderDetail;
 	}
+
+	private List<OrderDetail> orderDetail;
+
 
 }

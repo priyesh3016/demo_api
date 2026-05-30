@@ -6,7 +6,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
 import pojo.Login;
 import pojo.LoginResponse;
-import pojo.Orders;
+
 
 import static io.restassured.RestAssured.given;
 
@@ -68,8 +68,7 @@ public class ECommerceAPITest {
 				    .addHeader("authorization", token).setContentType(ContentType.JSON)
 				    .build();
 				
-				
-
+	
 				
 				
 			
