@@ -3,16 +3,12 @@ package pojo;
 import java.util.List;
 
 public class Orders {
-	
-	public List<OrderDetail> getOrderDetail() {
-		return orderDetail;
-	}
+    private List<Detail> orders;
 
-	public void setOrderDetail(List<OrderDetail> orderDetail) {
-		this.orderDetail = orderDetail;
-	}
-
-	private List<OrderDetail> orderDetail;
-
-
+    public List<Detail> getOrders() {
+        return orders;
+    }
+    public void setOrders(List<Detail> orderDetailList) {
+        this.orders = orderDetailList;
+    }
 }

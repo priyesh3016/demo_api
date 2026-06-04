@@ -1,16 +1,13 @@
 package pojo;
 
-public class OrderDetail  {
-	
-	private String Country;
-	private String productOrderedId;
-	
-	
-	public String getCountry() {
-		return Country;
+public class Detail {
+
+	private String country;
+    public String getCountry() {
+		return country;
 	}
 	public void setCountry(String country) {
-		Country = country;
+		this.country = country;
 	}
 	public String getProductOrderedId() {
 		return productOrderedId;
@@ -18,7 +15,5 @@ public class OrderDetail  {
 	public void setProductOrderedId(String productOrderedId) {
 		this.productOrderedId = productOrderedId;
 	}
-
-	
-
+	private String productOrderedId;
 }
